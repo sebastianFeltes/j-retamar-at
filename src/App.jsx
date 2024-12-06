@@ -382,11 +382,16 @@ function App() {
           </div>
         </div>
       </div>
-      <button
-        onClick={() => generatePDF(targetRef, { filename: "Retamar-J-CV.pdf" })}
-      >
-        Download PDF
-      </button>
+      <div className="flex w-full justify-center items-center">
+        <button
+          className="border rounded-md px-2 py-1 bg-indigo-100 border-violet-400 italic hover:bg-indigo-200"
+          onClick={() =>
+            generatePDF(targetRef, { filename: "Retamar-J-CV.pdf" })
+          }
+        >
+          Descargar PDF
+        </button>
+      </div>
     </div>
   );
 }
