@@ -48,7 +48,7 @@ const experience = [
   },
   {
     charge: "Acompañante Terapéutico - Niño con TEA",
-    place: "Institución Educativa",
+    place: "Institución Educativa, Jardín 'Arco Iris'",
     period: "Febrero 2023 - Actualidad",
   },
   {
