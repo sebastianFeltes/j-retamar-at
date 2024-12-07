@@ -67,7 +67,7 @@ const person = {};
 function App() {
   const targetRef = useRef();
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-full pb-4">
       <div
         className="flex flex-col gap-4 justify-start w-full lg:px-24 lg:py-4 "
         ref={targetRef}
@@ -342,7 +342,7 @@ function App() {
                   <span>EXPERIENCIA LABORAL</span>
                 </h2>
                 <ul className="border-l border-black p-2 flex flex-col gap-2">
-                  <li>
+                  {/* <li>
                     <p>
                       <span className="font-medium text-md">Cargo: </span>
                       Acompañante Terapéutico – Niño con TEA
@@ -355,7 +355,7 @@ function App() {
                       <span className="font-medium text-md">Período: </span>
                       Febrero 2023 – Actualidad
                     </p>
-                  </li>
+                  </li> */}
                   {experience
                     ? experience.map((ex, i) => (
                         <li key={i}>
