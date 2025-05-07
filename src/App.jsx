@@ -42,16 +42,15 @@ const options = {
 
 const experience = [
   {
-    charge: "Acompañante Terapéutico - Niño con Síndrome de Down",
-    place: "Colonia 'Los Tilos'",
-    period: "Febrero 2025 - Marzo 2025",
-  },
-  {
     charge: "Acompañante Terapéutico - Niño con TEA",
     place: "Instituto Canossiano San José",
     period: "Marzo 2025 - Actualidad",
   },
-
+  {
+    charge: "Acompañante Terapéutico - Niño con Síndrome de Down",
+    place: "Colonia 'Los Tilos'",
+    period: "Enero 2025 - Febrero 2025",
+  },
   {
     charge: "Acompañante Terapéutico - Niño con TEA",
     place: "Domicilio",
