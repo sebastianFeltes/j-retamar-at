@@ -11,10 +11,10 @@ const options = {
   // increases the image quality but also the size of the PDF, so be careful
   // using values higher than 10 when having multiple pages generated, it
   // might cause the page to crash or hang.
-  resolution: Resolution.EXTREME,
+  resolution: Resolution.MEDIUM,
   page: {
     // margin is in MM, default is Margin.NONE = 0
-    margin: Margin.SMALL,
+    margin: Margin.NONE,
     // default is 'A4'
     format: "default",
     // default is 'portrait'
@@ -43,60 +43,66 @@ const options = {
 const experience = [
   {
     charge: "Acompañante Terapéutico - Niño con TEA",
+    place: "Instituto Canossiano San José",
+    period: "Marzo 2025 - Actualidad",
+  },
+
+  {
+    charge: "Acompañante Terapéutico - Niño con TEA",
     place: "Domicilio",
-    period: "Febrero 2023 - Actualidad",
+    period: "Febrero 2023 - Diciembre 2024",
   },
   {
     charge: "Acompañante Terapéutico - Niño con TEA",
     place: "Institución Educativa, Jardín 'Arco Iris'",
-    period: "Febrero 2023 - Actualidad",
+    period: "Febrero 2023 - Diciembre 2024",
   },
   {
     charge: "Coordinadora Acompañantes Terapéuticos (pasantías)",
     place: "Casa de Abrigo de Mujeres de La Plata",
     period: "Septiembre 2022 - Diciembre 2022",
   },
-  {
+  /* {
     charge: "Acompañante Terapéutico (pasantías)",
     place: "Hogar Convivencial Raúl Pérez Carreño",
     period: "Septiembre 2018 - Diciembre 2018",
-  },
+  }, */
 ];
 
 const person = {};
 function App() {
   const targetRef = useRef();
   return (
-    <div className="w-full h-full pb-4">
+    <div className="w-full h-full">
       <div
-        className="flex flex-col gap-4 justify-start w-full lg:px-24 lg:py-4 "
+        className="flex flex-col justify-start w-full lg:p-4"
         ref={targetRef}
       >
-        <nav className="flex items-center lg:flex-row flex-col justify-between w-full bg-white rounded-lg lg:p-4">
+        <nav className="border-t border-x border-gray-200 flex items-center lg:flex-row flex-col justify-between w-full bg-white lg:p-4">
           <div className="flex items-center justify-start gap-4 h-full py-4">
             {/* profile image */}
             <img src={ProfilePhoto} alt="" className="w-32 rounded-full " />
             {/* name and profession */}
             <div className="flex flex-col gap-1">
-              <h2 className="lg:text-3xl text-2xl font-semibold font-serif ">
+              <h2 className="lg:text-3xl text-3xl font-semibold font-serif ">
                 JACQUELINE
               </h2>
-              <h2 className="lg:text-3xl text-2xl font-bold font-serif">
+              <h2 className="lg:text-3xl text-3xl font-bold font-serif">
                 RETAMAR
               </h2>
               <h4 className="lg:text-lg italic">
                 Técnica Superior en Acompañamiento Terapéutico
               </h4>
-              <p className="lg:text-md text-sm italic">
+              <p className="lg:text-lg text-lg italic">
                 M.P: <span className="font-semibold italic ">254256</span>
               </p>
             </div>
           </div>
           {/* contact info */}
-          <div className="flex flex-col items-start justify-start gap-2 py-4">
+          <div className="flex flex-col items-start justify-start py-4">
             {/* address */}
             <div className="flex font-medium items-center justify-center gap-4">
-              <span>
+              <span className=" w-10 h-10 flex justify-center items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -125,7 +131,7 @@ function App() {
             </div>
             {/* phone */}
             <div className="flex font-medium items-center justify-center gap-4">
-              <span>
+              <span className=" w-10 h-10 flex justify-center items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -147,7 +153,7 @@ function App() {
             </div>
             {/* email */}
             <div className="flex font-medium items-center justify-center gap-4">
-              <span>
+              <span className=" w-10 h-10 flex justify-center items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -172,16 +178,13 @@ function App() {
             </div>
           </div>
         </nav>
-        <div className="flex flex-col lg:flex-row items-start justify-start gap-2 px-4 bg-white rounded-lg">
+        <div className="border-b border-x h-[250vh] border-gray-200 flex flex-col lg:flex-row items-start justify-start px-4 bg-white ">
           {/* education, skills, languajes, personal info */}
           <ul className="lg:w-1/3 w-full h-full flex flex-col items-start justify-start">
             {/* education */}
-            <li className="w-full flex justify-center items-center">
-              <div className="w-3/4 lg:border-none  border-t"></div>
-            </li>
-            <li className="">
-              <h2 className="flex justify-start items-center gap-2 text-lg font-semibold border-b border-black">
-                <span className="flex justify-center items-center">
+            <li className="w-full h-72 border-l border-black">
+              <h2 className="flex justify-start items-center text-lg font-semibold border-b border-black">
+                <span className="flex justify-center items-center w-10 h-10">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -199,9 +202,9 @@ function App() {
                 </span>
                 <span className="">EDUCACIÓN</span>
               </h2>
-              <ul className="border-l border-black p-2 flex flex-col gap-2">
+              <ul className=" p-2 flex flex-col">
                 <li>
-                  <p className="flex font-medium text-md">
+                  <p className="flex font-medium text-lg">
                     SECUNDARIO COMPLETO
                   </p>
                   <p className="pl-8">
@@ -209,26 +212,26 @@ function App() {
                   </p>
                 </li>
                 <li>
-                  <p className="flex font-medium text-md">
+                  <p className="flex font-medium text-lg">
                     ACOMPAÑAMIENTO TERAPÉUTICO (Res. Min. 1014/14)
                   </p>
                   <p className="pl-8">Instituto CIAT-IFSA, La Plata</p>
                 </li>
                 <li>
-                  <p className="flex font-medium text-md">
+                  <p className="flex font-medium text-lg">
                     TÉCNICATURA SUPERIOR EN A.T. (Res. Min. 1221/15)
                   </p>
                   <p className="pl-8">Instituto CIAT-IFSA, La Plata</p>
                 </li>
               </ul>
             </li>
-            <li className="w-full flex justify-center items-center">
+            {/* <li className="w-full flex justify-center items-center">
               <div className="w-3/4 lg:border-none border-t"></div>
-            </li>
+            </li> */}
             {/* personal info */}
-            <li className="w-full">
-              <h2 className="flex justify-start items-center gap-2 text-lg font-semibold border-b border-black">
-                <span className="flex justify-center items-center">
+            <li className="w-full border-l border-black  h-96">
+              <h2 className="flex justify-start items-center text-lg font-semibold border-b border-black">
+                <span className="flex justify-center items-center w-10 h-10">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -246,36 +249,33 @@ function App() {
                 </span>
                 <span>DATOS PERSONALES</span>
               </h2>
-              <ul className="border-l border-black p-2 flex flex-col gap-2">
+              <ul className="p-2 flex flex-col">
                 <li>
-                  <p className="flex font-medium text-md">
+                  <p className="flex font-medium text-lg">
                     FECHA DE NACIMIENTO
                   </p>
                   <p className="pl-8">17 de Junio de 1995</p>
                 </li>
                 <li>
-                  <p className="flex font-medium text-md">
+                  <p className="flex font-medium text-lg">
                     LUGAR DE NACIMIENTO
                   </p>
                   <p className="pl-8">Villaguay, Entre Ríos</p>
                 </li>
                 <li>
-                  <p className="flex font-medium text-md">NACIMIENTO</p>
+                  <p className="flex font-medium text-lg">NACIMIENTO</p>
                   <p className="pl-8">Argentina</p>
                 </li>
               </ul>
             </li>
-            <li className="w-full flex justify-center items-center">
-              <div className="w-3/4 lg:border-none border-t"></div>
-            </li>
           </ul>
           {/* about me, experience */}
           <div className="lg:w-2/3 w-full flex flex-col lg:flex-row items-start justify-start">
-            <ul className="w-full h-full flex flex-col gap-4 items-start justify-start">
+            <ul className="w-full h-full flex flex-col items-start justify-start">
               {/* about me */}
-              <li className="w-full">
-                <h2 className="flex justify-start items-center gap-2 text-lg font-semibold border-b border-black">
-                  <span className="flex justify-center items-center">
+              <li className="w-full h-72 border-l border-black">
+                <h2 className="flex justify-start items-center text-lg font-semibold border-b border-black">
+                  <span className="flex justify-center items-center w-10 h-10">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -293,7 +293,7 @@ function App() {
                   </span>
                   <span>SOBRE MI</span>
                 </h2>
-                <p className="p-2 text-sm text-justify border-black border-l italic">
+                <p className="p-2 text-lg text-justify italic">
                   Responsable, puntual, comprometida y organizada, con capacidad
                   para trabajar en equipo y adaptarme a diferentes situaciones.
                   Experiencia en:{" "}
@@ -317,13 +317,13 @@ function App() {
                   promoviendo un ambiente de confianza y crecimiento mutuo.
                 </p>
               </li>
-              <li className="w-full flex justify-center items-center">
+              {/* <li className="w-full flex justify-center items-center">
                 <div className="w-3/4 lg:border-none border-t"></div>
-              </li>
+              </li> */}
               {/* workin experience  */}
-              <li className="w-full">
-                <h2 className="w-full flex justify-start items-center gap-2 text-lg font-semibold border-b border-black">
-                  <span className="flex justify-center items-center">
+              <li className="w-full border-l border-black h-96">
+                <h2 className="w-full flex justify-start items-center text-lg font-semibold border-b border-black">
+                  <span className="flex justify-center items-center w-10 h-10">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -341,18 +341,18 @@ function App() {
                   </span>
                   <span>EXPERIENCIA LABORAL</span>
                 </h2>
-                <ul className="border-l border-black p-2 flex flex-col gap-2">
+                <ul className=" p-2 flex flex-col">
                   {/* <li>
                     <p>
-                      <span className="font-medium text-md">Cargo: </span>
+                      <span className="font-medium text-lg">Cargo: </span>
                       Acompañante Terapéutico – Niño con TEA
                     </p>
                     <p>
-                      <span className="font-medium text-md">Lugar: </span>
+                      <span className="font-medium text-lg">Lugar: </span>
                       Domicilio
                     </p>
                     <p>
-                      <span className="font-medium text-md">Período: </span>
+                      <span className="font-medium text-lg">Período: </span>
                       Febrero 2023 – Actualidad
                     </p>
                   </li> */}
@@ -360,7 +360,7 @@ function App() {
                     ? experience.map((ex, i) => (
                         <li key={i}>
                           <p>
-                            <span className="font-medium text-md">Cargo: </span>
+                            <span className="font-medium text-lg">Cargo: </span>
                             {ex.charge}
                           </p>
                           <p>
