@@ -42,6 +42,11 @@ const options = {
 
 const experience = [
   {
+    charge: "Acompañante Terapéutico - Niño con Síndrome de Down",
+    place: "Colonia 'Los Tilos'",
+    period: "Febrero 2025 - Marzo 2025",
+  },
+  {
     charge: "Acompañante Terapéutico - Niño con TEA",
     place: "Instituto Canossiano San José",
     period: "Marzo 2025 - Actualidad",
@@ -57,11 +62,11 @@ const experience = [
     place: "Institución Educativa, Jardín 'Arco Iris'",
     period: "Febrero 2023 - Diciembre 2024",
   },
-  {
+  /*   {
     charge: "Coordinadora Acompañantes Terapéuticos (pasantías)",
     place: "Casa de Abrigo de Mujeres de La Plata",
     period: "Septiembre 2022 - Diciembre 2022",
-  },
+  }, */
   /* {
     charge: "Acompañante Terapéutico (pasantías)",
     place: "Hogar Convivencial Raúl Pérez Carreño",
